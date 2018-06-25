@@ -1,0 +1,16 @@
+OpenJDK 64-Bit Server VM (25.171-b10) for linux-amd64 JRE (1.8.0_171-b10), built on Apr 25 2018 09:25:54 by "mockbuild" with gcc 8.0.1 20180324 (Red Hat 8.0.1-0.20)
+Memory: 4k page, physical 18172752k(6205880k free), swap 1572860k(1572860k free)
+CommandLine flags: -XX:+CMSClassUnloadingEnabled -XX:+HeapDumpOnOutOfMemoryError -XX:InitialHeapSize=290764032 -XX:+ManagementServer -XX:MaxDirectMemorySize=536870912 -XX:MaxHeapSize=1073741824 -XX:MaxNewSize=357916672 -XX:MaxTenuringThreshold=6 -XX:OldPLABSize=16 -XX:+PrintGC -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+UseParNewGC 
+0.582: [GC (Allocation Failure)  75904K->9757K(275200K), 0.0060012 secs]
+0.885: [GC (Allocation Failure)  85661K->10946K(275200K), 0.0190284 secs]
+1.146: [GC (Allocation Failure)  86850K->10222K(275200K), 0.0042308 secs]
+1.151: [GC (CMS Initial Mark)  11373K(275200K), 0.0019204 secs]
+1.157: [GC (CMS Final Remark)  11537K(275200K), 0.0070151 secs]
+1.520: [GC (Allocation Failure)  85819K->10426K(275200K), 0.0036945 secs]
+1.915: [GC (Allocation Failure)  86330K->13583K(275200K), 0.0044933 secs]
+2.097: [GC (Allocation Failure)  89487K->14086K(275200K), 0.0068859 secs]
+2.373: [GC (Allocation Failure)  89990K->14544K(275200K), 0.0026301 secs]
+2.713: [GC (Allocation Failure)  90448K->16630K(275200K), 0.0032944 secs]
+2.717: [GC (CMS Initial Mark)  17047K(275200K), 0.0011324 secs]
+2.725: [GC (CMS Final Remark)  18268K(275200K), 0.0134700 secs]
+2.956: [GC (Allocation Failure)  92280K->16973K(275200K), 0.0085501 secs]

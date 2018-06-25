@@ -1,0 +1,48 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spark-jobserver
+spec:
+  type: ClusterIP
+  selector:
+    app: spark-jobserver
+  ports:
+  - port: 8080
+    name: http-spark-jobserver
+    targetPort: http-api
+  - port: 8090
+    name: http-spark-jobserver1
+    targetPort: http-api1
+  - port: 9999
+    name: jmx-spark-jobserver
+    targetPort: jmx
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: spark-jobserver
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: spark-jobserver
+    spec:
+      containers:
+      - name: spark-jobserver
+        image: pasikon/spark-jobserver:job-server-0.8-spark-2.2.0
+        imagePullPolicy: Never
+        ports:
+        - name: http-api
+          containerPort: 8080
+        - name: http-api1
+          containerPort: 8090
+        - name: jmx
+          containerPort: 9999
+        resources:
+          limits:
+            cpu: "1"
+            memory: 1524Mi
