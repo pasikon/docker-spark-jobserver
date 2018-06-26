@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: spark-jobserver
-        image: pasikon/spark-jobserver:job-server-0.8-spark-2.2.0
+        image: pasikon/spark-jobserver:job-server-0.8-spark-2.3.1
         imagePullPolicy: Never
         ports:
         - name: http-api
@@ -44,5 +44,5 @@ spec:
           containerPort: 9999
         resources:
           limits:
-            cpu: "1"
-            memory: 1524Mi
+            cpu: "2"
+            memory: 2048Mi
