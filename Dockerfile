@@ -7,7 +7,7 @@ RUN apt-get update
 RUN apt-get install -y default-jdk
 RUN apt-get install wget
 RUN apt-get install -y iputils-ping
-RUN cd /opt/ && wget http://apache.rediris.es/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz
+RUN cd /opt/ && wget https://archive.apache.org/dist/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz
 
 RUN cd /opt/ && tar xzf /opt/spark-2.2.0-bin-hadoop2.7.tgz
 RUN ls /opt/
